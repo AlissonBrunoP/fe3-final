@@ -1,0 +1,30 @@
+.headerLight,
+.headerDark {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  background-repeat: no-repeat;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 20%;
+  
+}
+
+.headerDark {
+  color: hsl(234, 39%, 85%);
+  background-color: black;
+}
+.headerLight {
+  color: black;
+  background-color: hsl(234, 39%, 85%);
+}
+
+.title{
+  margin-left: 0px;
+}
