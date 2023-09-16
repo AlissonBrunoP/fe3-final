@@ -1,0 +1,39 @@
+footer {
+  color: white;
+  text-align: center;
+}
+
+#footerTexto {
+  background-color: red;
+  width: 100%;
+}
+
+#footerRedes img {
+  margin-right: 10px;
+}
+
+#dhLogo {
+  width: 200px;
+}
+
+.redesSociales {
+  width: 50px;
+}
+
+#footerTexto {
+  background-color: red; /* Fondo rojo solo para esta fila */
+  text-align: center; /* Texto centrado */
+  padding: 10px 0; /* Espaciado interior superior e inferior */
+}
+
+#footerRedes {
+  background-color: white; /* Fondo blanco solo para esta fila */
+  display: flex;
+  align-items: center;
+  padding: 10px 0; /* Espaciado interior superior e inferior */
+}
+
+/* Estilos específicos para el logo DH */
+#footerRedes img:first-child {
+  margin-right: 20px; /* Espacio adicional a la derecha del logo DH */
+}

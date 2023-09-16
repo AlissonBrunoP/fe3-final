@@ -1,12 +1,32 @@
-import React from 'react'
+import React from "react";
+import DHLogo from "../images/DH.png";
+import FB from "../images/ico-facebook.png";
+import IG from "../images/ico-instagram.png";
+import TK from "../images/ico-tiktok.png";
+import WP from "../images/ico-whatsapp.png";
+import './Footer.css';
 
 const Footer = () => {
   return (
     <footer>
-        <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+      <div id="contenedorFooter">
+        <div id="footerTexto">
+          <p>Powered by</p>
+        </div>
+        <div id="footerRedes">
+          <div>
+            <img src={DHLogo} alt="DH-logo" id="dhLogo"/>
+          </div>
+          <div>
+            <img src={FB} alt="Facebook" className="redesSociales" />
+            <img src={IG} alt="Insagram" className="redesSociales"  />
+            <img src={WP} alt="Whatsapp" className="redesSociales" />
+            <img src={TK} alt="TikTok" className="redesSociales" />
+          </div>
+        </div>
+      </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

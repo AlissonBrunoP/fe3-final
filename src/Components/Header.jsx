@@ -13,14 +13,14 @@ function Header(props) {
   return (
     <header className={props.changeMode ? "headerDark" : "headerLight"}>
       <div>
-        <h1 className="title">DH Odonto</h1>
+        <h1 className="title"><span>D</span>H Odonto</h1>
       </div>
 
-      <div>
-        <button id="btnHome">Home</button>
-        <button id="btnHome">Contact</button>
-        <button id="btnHome">Favs</button>
-        <button className="button" onClick={onClick}>
+      <div id="menuHeader">
+        <button id="btnHome" className="btnHeader">Home</button>
+        <button id="btnContact" className="btnHeader">Contact</button>
+        <button id="btnFavs" className="btnHeader">Favs</button>
+        <button  className="btnH" onClick={onClick}>
           <img src={props.changeMode ? sun : moon} alt="Logo" />
         </button>
       </div>

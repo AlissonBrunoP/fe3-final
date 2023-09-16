@@ -1,19 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
 .headerLight,
 .headerDark {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
-  background-repeat: no-repeat;
+}
+#menuHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.button {
-  background: none;
+.btnHeader, .btnH {
   border: none;
-  cursor: pointer;
-  background-color: black;
-  border-radius: 20%;
-  
+  border-radius: 15%;
+  margin: 20px;
+  width: 100px;
+  height: 35px;
+  background-color:  hsl(0, 0%, 97%);
+}
+
+.btnH{
+background-color: black;
+width: 35px;
+}
+
+.btnH img {
+  width: 15px;
 }
 
 .headerDark {
@@ -22,9 +38,9 @@
 }
 .headerLight {
   color: black;
-  background-color: hsl(234, 39%, 85%);
+  background-color: hsl(0, 0%, 97%);
 }
 
-.title{
-  margin-left: 0px;
+span{
+  color: red;
 }

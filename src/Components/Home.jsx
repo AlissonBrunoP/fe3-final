@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Doctor from '../images/doctor.jpg';
+import Star from '../images/star.png';
+import './Home.css';
 
 const Home = (props) => {
   const [users, setUsers] = useState([]);
@@ -25,24 +27,22 @@ const Home = (props) => {
   }, []);
 
   return (
-    <div className={props.changeMode ? 'dark' : 'light'}>
-      <h1>Lista de Usuarios</h1>
-      <button className="button" onClick={toggleMode}>
-        <img src={props.changeMode ? 'sun.png' : 'moon.png'} alt="Logo" />
-      </button>
-      {isLoading ? (
-        <p>Cargando...</p>
-      ) : (
-        <ul>
-          {users.map((user) => (
-            <li key={user.id}>
-              <img src={Doctor} alt="" />
+    <div id='contenedorDoctores' className={props.changeMode ? 'dark' : 'light'}>
+      <h1 className='tituloHome'>Home</h1>
+      <div className='listaDentistas'>
+        {users.map((user) => (
+          <div key={user.id} className="doctor-container">
+            <div className="doctor-info">
+              <img src={Doctor} alt="" className='imgDoctor' />
               <p>{user.name}</p>
               <p>{user.username}</p>
-            </li>
-          ))}
-        </ul>
-      )}
+            </div>
+            <div className="star-container">
+              <button><img src={Star} alt="" id='imgStar' /></button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
