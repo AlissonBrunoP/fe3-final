@@ -1,16 +1,19 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Home from "../Components/Home";
-import Dentista from "../Components/Dentista";
+import Contact from "../Components/Contact";
+import Dentist from "../Components/Dentist";
+import Favs from "../Components/Favs";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/Contacto" element={<Contacto/>} />
-        <Route path="/Dentista/:id/" element={<Dentista/>} />
-        <Route path="/Favs" element= {<Favs/>}/>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
-);
+const RoutesConfig = ({ changeMode }) => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home changeMode={changeMode} />} />
+      <Route path="/Contact" element={<Contact changeMode={changeMode} />} />
+      <Route path="/Dentista/:id" element={<Dentist changeMode={changeMode} />} />
+      <Route path="/Favs" element={<Favs changeMode={changeMode} />} />
+    </Routes>
+  );
+};
+
+export default RoutesConfig;

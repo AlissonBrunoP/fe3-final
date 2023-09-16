@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Dentista = () => {
+const Contact = () => {
   return (
     <footer>
         <p>Powered by</p>
@@ -9,4 +9,4 @@ const Dentista = () => {
   )
 }
 
-export default Dentista;
+export default Contact;

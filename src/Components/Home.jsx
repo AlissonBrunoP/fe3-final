@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; 
 import Doctor from '../images/doctor.jpg';
 import Star from '../images/star.png';
 import './Home.css';
@@ -6,12 +7,7 @@ import './Home.css';
 const Home = (props) => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
-  const toggleMode = () => {
-    if (props.setChangeMode) {
-      props.setChangeMode(!props.changeMode);
-    }
-  };
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -26,6 +22,10 @@ const Home = (props) => {
       });
   }, []);
 
+  const goToDentist = (id) => {
+    navigate(`/Dentista/${id}`);
+  };
+
   return (
     <div id='contenedorDoctores' className={props.changeMode ? 'dark' : 'light'}>
       <h1 className='tituloHome'>Home</h1>
@@ -33,8 +33,11 @@ const Home = (props) => {
         {users.map((user) => (
           <div key={user.id} className="doctor-container">
             <div className="doctor-info">
-              <img src={Doctor} alt="" className='imgDoctor' />
-              <p>{user.name}</p>
+              {/* Utiliza una función para navegar al componente Dentist */}
+              <span onClick={() => goToDentist(user.id)}>
+                <img src={Doctor} alt="" className='imgDoctor' />
+                <p>{user.name}</p>
+              </span>
               <p>{user.username}</p>
             </div>
             <div className="star-container">

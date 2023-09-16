@@ -1,9 +1,9 @@
 import React from "react";
 import DHLogo from "../images/DH.png";
-import FB from "../images/ico-facebook.png";
-import IG from "../images/ico-instagram.png";
-import TK from "../images/ico-tiktok.png";
-import WP from "../images/ico-whatsapp.png";
+import FB from "../images/ico-facebook.jpg";
+import IG from "../images/ico-instagram.jpg";
+import TK from "../images/ico-tiktok.jpg";
+import WP from "../images/ico-whatsapp.jpg";
 import './Footer.css';
 
 const Footer = () => {

@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
-import Header from './Components/Header'
-import Home from './Components/Home'
+import { BrowserRouter } from "react-router-dom";
+import Header from './Components/Header';
 import Footer from "./Components/Footer";
+import RoutesConfig from './Routes/Routes'; 
 
 function App() {
   const [changeMode, setChangeMode] = useState(false);
@@ -13,9 +13,11 @@ function App() {
 
   return (
     <div className={changeMode ? "dark" : "light"}>
-      <Header changeMode={changeMode} setChangeMode={setChangeMode} />
-      <Home changeMode={changeMode} />
-      <Footer />
+      <BrowserRouter>
+        <Header changeMode={changeMode} setChangeMode={setChangeMode} />
+        <RoutesConfig changeMode={changeMode} />
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
